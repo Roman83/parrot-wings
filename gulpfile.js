@@ -12,6 +12,7 @@ const browserSync = require('browser-sync');
 const source = require('vinyl-source-stream');
 const htmlmin = require('gulp-htmlmin');
 const buffer = require('vinyl-buffer');
+const image = require('gulp-image');
 
 gulp.task('sass', () => {
   gulp.src('./src/**/*.scss')
@@ -64,10 +65,17 @@ gulp.task('watch', () => {
   gulp.watch('./src/**/*.js', ['js-lint', 'js-build']);
   gulp.watch('./src/**/*.scss', ['sass']);
   gulp.watch('./**/*.html', ['html']);
+  gulp.watch('./src/img/*.*', ['img']);
+});
+
+gulp.task('img', function () {
+  gulp.src('./src/img/*')
+    .pipe(image())
+    .pipe(gulp.dest('./build/img'));
 });
 
 gulp.task('default',
-          ['js-lint', 'js-build', 'sass', 'html', 'watch', 'browser-sync']);
+          ['js-lint', 'js-build', 'sass', 'html', 'img', 'watch', 'browser-sync']);
 
 gulp.task('sass-dist', () => {
   gulp.src('./src/**/*.scss')
@@ -106,4 +114,10 @@ gulp.task('html-dist', () => {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('dist', ['js-dist', 'sass-dist', 'html-dist']);
+gulp.task('img-dist', function () {
+  gulp.src('./src/img/*')
+    .pipe(image())
+    .pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('dist', ['js-dist', 'sass-dist', 'html-dist', 'img-dist']);
