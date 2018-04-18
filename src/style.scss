@@ -1,11 +1,21 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 155px;
+    background: url('img/parrot.jpeg');
+    background-position: center -114px;
+}
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    height: 45px;
+    margin-top: 110px;
     text-align: center;
     background: black;
-    opacity: 0.85;
+    opacity: 0.6;
 
     li {
         display: inline;
@@ -22,6 +32,7 @@ nav ul {
 }
 
 main {
+    margin-top: 155px;
     background: #e9e9e9;
 }
 
