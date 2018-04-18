@@ -1,0 +1,80 @@
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: black;
+    opacity: 0.85;
+
+    li {
+        display: inline;
+    }
+    
+    .nav_link {
+        text-decoration: none;
+        width: 80px;
+        color: #ffffff;
+        font-family: 'Oswald', 'sans-serif';
+        font-size: 26px;
+        padding: 20px;;
+    }
+}
+
+main {
+    background: #e9e9e9;
+}
+
+h2 {
+    position: relative;
+    margin-left: 25px;
+    display: block;
+}
+
+h2:before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 8px;
+    background: #933435;
+    left: -26px;
+    bottom: 0.35em;
+}
+
+.item {
+    display: inline-block;
+
+    img {
+        display: inline-block;
+        box-shadow: 0 0 5px 0;
+    }
+
+    .item_status {
+        font-family: 'ArialMT', 'sans-serif';
+        font-size: 11px;
+    }
+
+    .item_name {
+        font-family: 'Oswald', 'sans-serif';
+        font-size: 18px;
+    }
+
+    .item_link {
+        background: #575757;
+        width: 80px;
+        height: 30px;
+        font-family: ArialMT,Arial,sans-serif;
+        font-size: 12px;
+    }
+
+}
+
+@font-face {
+    font-family: ArialMT;
+    src: url(fonts/ARIALMT.ttf);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(fonts/Oswald.ttf);
+}
