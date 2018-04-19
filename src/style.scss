@@ -51,7 +51,7 @@ h1 {
     margin-bottom: 32px;
 }
 
-h2 {
+main h2 {
     color: #121212;
     font-family: 'Oswald', 'sans-serif';
     font-size: 26px;
@@ -131,6 +131,44 @@ h2:before {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+footer {
+    background: #181818;
+}
+
+.footer_icons {
+    height: 70px;
+    color: #444444;
+
+    a {
+        font-size: 48px;
+        color: #2d2d2f;
+        text-decoration: none;
+    }
+}
+
+.footer_logo {
+    font-family: 'Oswald', 'sans-serif';
+    font-size: 36px;
+    color: #444444;
+}
+
+.footer_column_title {
+    font-size: 26px;
+    color: #444444;
+    font-family: "Oswald";
+    font-weight: normal;
+}
+
+.footer_column_list {
+    list-style-type: none;
+}
+
+.footer_column_item {
+    font-size: 16px;
+    color: #bbbbbb;
+    font-family: "Oswald";
 }
 
 @font-face {
