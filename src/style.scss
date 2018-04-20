@@ -1,3 +1,4 @@
+$header-height: 155px;
 $panel-width: 338px;
 $main-padding: 47px;
 $item-margin: 17px;
@@ -6,18 +7,34 @@ body {
     letter-spacing: -0.05em;
     padding: 0;
     margin: 0;
+    background: url('img/back.png');
 }
 
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 155px;
+    height: $header-height;
     background: url('img/parrot.jpeg');
     background-position: center -114px;
 }
 
+nav:before {
+    content: '';
+    background: url('img/back-left.png'), url('img/back-right.png');
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height;
+    z-index: -1;
+}
+
 nav ul {
+    width: 100%;
     max-width: 1172px;
     list-style-type: none;
     margin: auto;
@@ -25,21 +42,29 @@ nav ul {
     height: 45px;
     margin-top: 110px;
     text-align: center;
-    background: black;
-    opacity: 0.6;
+    bbackground: rgba(0,0,0,0.6);
+    display: flex;
 
     li {
-        display: inline-block;
-        width: 13%;
+        width: 100%;
+        ppadding: 0;
+        mmargin: 0;
     }
     
     .nav_link {
+        box-sizing: border-box;
+        margin: 0;
         text-decoration: none;
-        width: 80px;
+        height:100%;
         color: #ffffff;
         font-family: 'Oswald', 'sans-serif';
         font-size: 26px;
-        padding: 20px;;
+        display: block;
+    }
+
+    .nav_link:hover {
+        border-bottom: 8px solid #7dff60;
+        background: #b6b6b6;
     }
 }
 
@@ -49,6 +74,7 @@ main {
     padding-top: 30px;
     padding-right: $panel-width + 2 * $main-padding - $item-margin;
     padding-left: $main-padding - $item-margin;
+    padding-bottom: 30px;
     box-sizing: border-box;
     max-width: 1172px;
     margin-left: auto;
@@ -200,6 +226,7 @@ h1 {
         box-sizing: border-box;
         margin: 0 0 10px 0;
         padding-left: 16px;
+        padding-right: 16px;
         font-size: 16px;
         font-family: "ArialMT";
     }
