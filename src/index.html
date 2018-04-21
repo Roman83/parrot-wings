@@ -9,7 +9,7 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul id="nav" class="collapsed" >
           <li><a class="nav_link" href="#">Home</a></li>
           <li><a class="nav_link" href="#">Credits</a></li>
           <li><a class="nav_link" href="#">Exchange</a></li>
@@ -19,11 +19,13 @@
           <li><a class="nav_link" href="#">About</a></li>
         </ul>
       </nav>
+      <div class="nav-toggle"><i class="icon-menu"></i></div>
+      <div class="search-toggle"><i class="icon-search"></i></div>
     </header>
 
     <main>
 
-      <div class="search-bar">
+      <div class="search-bar collapsed">
         <input name="search" type="search" placeholder="Search..."/>
         <i class="icon-search"></i>
       </div>
@@ -170,5 +172,7 @@
       </div>
       
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>

@@ -34,7 +34,7 @@ gulp.task('js-lint', () => {
 
 gulp.task('js-build', () => {
   return browserify({
-    entries: './src/index.js',
+    entries: './src/script.js',
     debug: true,
     extensions: ['es6'],
     transform: [babelify.configure({
@@ -100,7 +100,7 @@ gulp.task('sass-dist', () => {
 
 gulp.task('js-dist', () => {
   return browserify({
-    entries: './src/index.js',
+    entries: './src/script.js',
     debug: false,
     extensions: ['es6'],
     transform: [babelify.configure({

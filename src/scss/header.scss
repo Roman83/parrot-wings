@@ -2,9 +2,9 @@ header nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: $header-height;
+    height: $header-height-small;
     background: url('img/parrot.jpeg');
-    background-position: center -114px;
+    background-position: center -159px;
     z-index: 2;
 
     ul {
@@ -13,16 +13,13 @@ header nav {
         list-style-type: none;
         margin: auto;
         padding: 0;
-        height: 45px;
         margin-top: 110px;
         text-align: center;
-        bbackground: rgba(0,0,0,0.6);
-        display: flex;
+        background: rgba(0,0,0,0.8);
+        display: block;
 
         li {
             width: 100%;
-            ppadding: 0;
-            mmargin: 0;
         }
         
         .nav_link {
@@ -34,26 +31,81 @@ header nav {
             font-family: 'Oswald', 'sans-serif';
             font-size: 26px;
             display: block;
+            padding: 7px;
         }
 
         .nav_link:hover {
-            border-bottom: 8px solid #7dff60;
+            border-right: 8px solid #7dff60;
+            border-left: 8px solid #7dff60;
             background: #b6b6b6;
         }
     }
+
+    ul.collapsed { display: none; }
 }
 
-header nav:before {
-    content: '';
-    background: url('img/back-left.png'), url('img/back-right.png');
-    background-position: left top, right top;
-    background-repeat: no-repeat, no-repeat;
-    position: fixed;
+.nav-toggle, .search-toggle {
     display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: $header-height;
-    z-index: -1;
+    position: fixed;
+    z-index: 2;
+    color: white;
+    cursor: pointer;
 }
 
+.nav-toggle {
+    left: 30px;
+    top: 10px;
+    font-size: 42px;
+}
+
+.search-toggle {
+    right: 30px;
+    top: 22px;
+    font-size: 24px;
+}
+
+@media (min-width: 850px) {
+    header nav {
+        height: $header-height;
+            background-position: center -114px;
+
+        ul {
+            height: 45px;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+
+            .nav_link {
+                pading: 0;
+            }
+
+            .nav_link:hover {
+                border-bottom: 8px solid #7dff60;
+                border-left: none;
+                border-right: none;
+            }
+        }
+
+        ul.collapsed { display: flex; }
+    }
+
+    header nav:before {
+        content: '';
+        background: url('img/back-left.png'), url('img/back-right.png');
+        background-position: left top, right top;
+        background-repeat: no-repeat, no-repeat;
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $header-height;
+        z-index: -1;
+    }
+
+    .nav-toggle { display: none; }
+
+}
+
+@media (min-width: 1100px) {
+    .search-toggle { display: none; }
+}
