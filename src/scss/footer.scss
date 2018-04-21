@@ -12,22 +12,28 @@ footer {
     position: relative;
     max-width: 1172px;
     margin: auto;
-    padding-bottom: $bottom-margin;
+}
+
+.footer_container-top {
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 20px;
 }
 
 .footer_top {
     height: 90px;
-    baxckground: #151515;
+    background: #151515;
     color: #444444;
 
     a {
         display: inline-block;
+        box-sizing: border-box;
         font-size: 32px;
         color: #2d2d2f;
         width: 15%;
         height: 100%;
         text-align: center;
-        padding-top: 8px;
+        padding-top: 12px;
     }
     
     a:hover i {
@@ -95,7 +101,7 @@ footer {
 
     .footer_top a { width: 10%; }
 
-    .footer_column { max-width: 20%; }
+    .footer_column { width: 20%; }
 
     .footer_logo {
         position: absolute;
@@ -126,23 +132,28 @@ footer {
 @media (min-width: 720px) {
 
     .footer_top {
-        height: 70%;
+        height: 70px;
 
         a {
             font-size: 48px;
         }
     }
 
+    .footer_container-top {
+        padding-top: 0;
+    }
+
     .footer_column {
         display: inline-block;
         vertical-align: top;
+        text-align: left;
         max-width: 33%;
         padding: 0 3%;
         margin: 0;
     }
 
     .footer_column_list {
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
     
     .footer_column_item {
