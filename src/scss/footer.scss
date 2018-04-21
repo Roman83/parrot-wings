@@ -1,7 +1,13 @@
 footer {
     background: #181818;
+    margin: 0;
+
+    nav a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
- 
+
 .footer_container {
     position: relative;
     max-width: 1172px;
@@ -9,36 +15,16 @@ footer {
     padding-bottom: $bottom-margin;
 }
 
-.footer_icons {
-    height: 70px;
-    display: inline-block;
-    width: 66%;
-
-    a {
-        display: inline-block;
-        font-size: 48px;
-        color: #2d2d2f;
-        width: 10%;
-        height: 100%;
-        text-align: center;
-        padding-top: 8px;
-    }
-    
-    a:hover i {
-        color: #999999;
-    }
-}
-
 .footer_top {
-    height: 70px;
-    background: #151515;
+    height: 90px;
+    baxckground: #151515;
     color: #444444;
 
     a {
         display: inline-block;
-        font-size: 48px;
+        font-size: 32px;
         color: #2d2d2f;
-        width: 10%;
+        width: 15%;
         height: 100%;
         text-align: center;
         padding-top: 8px;
@@ -50,30 +36,25 @@ footer {
 }
 
 .footer_logo {
-    display: inline-block;
-    position: absolute;
-    right: $main-padding;
-    top: -70px;
-    height: 70px;
     box-sizing: border-box;
-    width: 33%;
+    height: 135px;
     font-family: 'Oswald', 'sans-serif';
     font-size: 36px;
     color: #444444;
-    text-align: right;
+    text-align: center;
+}
 
-    span {
-        vertical-align: middle;
-    }
-
+.footer_logo:before { /* vertical align */
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .footer_column {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 20%;
-    padding: 0 3%;
-    margin: 0;
+    display: block;
+    text-align: center;
 }
 
 .footer_column_title {
@@ -90,11 +71,11 @@ footer {
     color: #bbbbbb;
     font-family: 'Oswald', 'sans-serif';
     padding: 0;
-    margin: 0;
+    margin: 0 0 50px 0;
 }
 
 .footer_column_item {
-    margin: 9px 0 0 0;
+    padding: 5px;
 }
 
 .requirements {
@@ -111,6 +92,20 @@ footer {
 }
 
 @media (min-width: 850px) {
+
+    .footer_top a { width: 10%; }
+
+    .footer_column { max-width: 20%; }
+
+    .footer_logo {
+        position: absolute;
+        right: $main-padding;
+        top: -70px;
+        height: 70px;
+        width: 33%;
+        text-align: right;
+    }
+    
     .requirements {
         position: absolute;
         right: $main-padding;
@@ -126,4 +121,32 @@ footer {
             margin: 0;
         }
     }    
+}
+
+@media (min-width: 720px) {
+
+    .footer_top {
+        height: 70%;
+
+        a {
+            font-size: 48px;
+        }
+    }
+
+    .footer_column {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 33%;
+        padding: 0 3%;
+        margin: 0;
+    }
+
+    .footer_column_list {
+        margin-bottom: 0;
+    }
+    
+    .footer_column_item {
+        margin: 9px 0 0 0;
+        padding: 0;
+    }
 }
