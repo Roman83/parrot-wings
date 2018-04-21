@@ -18,7 +18,7 @@ footer {
         display: inline-block;
         font-size: 48px;
         color: #2d2d2f;
-        width: 16%;
+        width: 10%;
         height: 100%;
         text-align: center;
         padding-top: 8px;
@@ -33,17 +33,39 @@ footer {
     height: 70px;
     background: #151515;
     color: #444444;
+
+    a {
+        display: inline-block;
+        font-size: 48px;
+        color: #2d2d2f;
+        width: 10%;
+        height: 100%;
+        text-align: center;
+        padding-top: 8px;
+    }
+    
+    a:hover i {
+        color: #999999;
+    }
 }
 
 .footer_logo {
     display: inline-block;
+    position: absolute;
+    right: $main-padding;
+    top: -70px;
+    height: 70px;
     box-sizing: border-box;
     width: 33%;
     font-family: 'Oswald', 'sans-serif';
     font-size: 36px;
     color: #444444;
     text-align: right;
-    padding-right: 35px;
+
+    span {
+        vertical-align: middle;
+    }
+
 }
 
 .footer_column {
@@ -88,7 +110,7 @@ footer {
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 850px) {
     .requirements {
         position: absolute;
         right: $main-padding;

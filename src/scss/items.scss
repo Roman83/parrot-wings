@@ -1,0 +1,107 @@
+.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    position: relative;
+
+    img {
+        display: inline-block;
+        box-shadow: 0.5px 0.866px 5px rgba(0,0,0,0.34);
+        border: 1px solid #999999;
+        border-radius: 3px;
+        margin: 0 $item-margin;
+    }
+
+    .item_status {
+        font-family: 'ArialMT', 'sans-serif';
+        font-size: 11px;
+        margin-top: 12px;
+    }
+
+    .item_name {
+        box-sizing: border-box;
+        font-family: 'Oswald', 'sans-serif';
+        font-size: 18px;
+        font-weight: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 144px;
+        margin: 8px, 0, 10px, 0;
+        padding: 0;
+    }
+
+    .item_link {
+        background: #464646;
+        background: linear-gradient(rgb(95, 95, 95), rgb(70, 70, 70));
+        width: 80px;
+        height: 30px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.4), 0 1px 2px inset;
+        border: 1px solid #494949;
+        border-radius: 4px;
+        font-family: ArialMT,Arial,sans-serif;
+        font-size: 12px;
+        color: #ffffff;
+        text-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+    }
+
+    .item_link:hover {
+        color: #222222;
+        background: #565656;
+        background: linear-gradient(rgb(70, 70, 70), rgb(95, 95, 95));
+    }
+
+    .item_popup {
+        position: absolute;
+        width: 248px;
+        height: 109px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.79);
+        bottom: 40px;
+        left: (142px - 248px) / 2;
+        z-index: 1;
+
+        h3, p {
+            color: #d3d3d3;
+            font-family: "ArialMT";
+            text-align: center;
+            letter-spacing: 0;
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .item_popup::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.79) transparent transparent transparent;
+    }
+}
+
+.more_items {
+    color: #444444;
+    font-family: 'ArialMT', 'sans-serif';
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,59 @@
+header nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $header-height;
+    background: url('img/parrot.jpeg');
+    background-position: center -114px;
+    z-index: 2;
+
+    ul {
+        width: 100%;
+        max-width: 1172px;
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+        height: 45px;
+        margin-top: 110px;
+        text-align: center;
+        bbackground: rgba(0,0,0,0.6);
+        display: flex;
+
+        li {
+            width: 100%;
+            ppadding: 0;
+            mmargin: 0;
+        }
+        
+        .nav_link {
+            box-sizing: border-box;
+            margin: 0;
+            text-decoration: none;
+            height:100%;
+            color: #ffffff;
+            font-family: 'Oswald', 'sans-serif';
+            font-size: 26px;
+            display: block;
+        }
+
+        .nav_link:hover {
+            border-bottom: 8px solid #7dff60;
+            background: #b6b6b6;
+        }
+    }
+}
+
+header nav:before {
+    content: '';
+    background: url('img/back-left.png'), url('img/back-right.png');
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height;
+    z-index: -1;
+}
+
