@@ -15,7 +15,7 @@ const buffer = require('vinyl-buffer');
 const image = require('gulp-image');
 
 gulp.task('sass', () => {
-  gulp.src('./src/**/*.scss')
+  gulp.src('./src/style.scss')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -87,7 +87,7 @@ gulp.task('default',
            'watch', 'browser-sync']);
 
 gulp.task('sass-dist', () => {
-  gulp.src('./src/**/*.scss')
+  gulp.src('./src/style.scss')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],

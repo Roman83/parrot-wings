@@ -2,6 +2,10 @@ $header-height: 155px;
 $panel-width: 338px;
 $main-padding: 47px;
 $item-margin: 17px;
+$bottom-margin: 30px;
+
+@import 'style-footer.scss';
+@import 'entypo-embedded.scss';
 
 body {
     letter-spacing: -0.05em;
